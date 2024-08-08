@@ -17,7 +17,7 @@ return [
 
     'stateful' => explode(',', env('SANCTUM_STATEFUL_DOMAINS', sprintf(
         '%s%s',
-        'localhost,localhost:3000,127.0.0.1,127.0.0.1:8000,::1',
+        'localhost,localhost:3000,127.0.0.1,127.0.0.1:8000,test.tm.com,::1',    //api-e yuzlenip bilyan domain atlary| postmandaky get zaproslarda referer-e su dns-leri yada ip-leri goyup ulanmaly
         Sanctum::currentApplicationUrlWithPort()
     ))),
 

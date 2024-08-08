@@ -34,6 +34,16 @@ class LoginController extends Controller
      */
     public function __construct()
     {
+
+        // $session = app()->make('session');
+        // $session = app('session');
+        // $session = Session::get('key);
+        $session = session();
+        $session->put('alert','input wass successfullt');
+        
+        // dump('test');
+        // dd( $session);
+        
         $this->middleware('guest')->except('logout');
         $this->middleware('auth')->only('logout');
     }
